@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">BottomSheets</string>
+    <string name="app_name">AndroidNewWidges</string>
+    <string name="bottomsheet_activity">AndroidNewWidges</string>
     <string name="coordiator_activity">CoordiatorActivity</string>
     <string name="title_activity_collapsing_toolbar_layout">CollapsingToolbarLayoutActivity</string>
     <string name="navigation_view_activity">NavigationViewActivity</string>
