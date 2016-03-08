@@ -1,6 +1,9 @@
 package android.com.bottomsheets;
 
+import android.com.collapsingtoolbar.CollapsingToolbarLayoutActivity;
+import android.com.corrdinatorlayout.CoordinatorLayoutActivity;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
@@ -27,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button collapseBottomSheetButton = (Button) findViewById(R.id.collapseBottomSheetButton);
         Button bottomSheetDialogTestButton = (Button) findViewById(R.id.bottomSheetDialogTestButton);
         Button showBottomSheetDialogButton = (Button) findViewById(R.id.showBottomSheetDialogButton);
+        Button corrdinatorLayoutTest = (Button) findViewById(R.id.corrdinatorLayoutTest);
+        Button collapselayout = (Button) findViewById(R.id.collapselayout);
         final TextView text1 = (TextView) findViewById(R.id.text1);
 
         /**
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         collapseBottomSheetButton.setOnClickListener(this);
         bottomSheetDialogTestButton.setOnClickListener(this);
         showBottomSheetDialogButton.setOnClickListener(this);
+        corrdinatorLayoutTest.setOnClickListener(this);
+        collapselayout.setOnClickListener(this);
 
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -82,6 +89,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.showBottomSheetDialogButton:
                 new CustomBottomSheetDialogFragment().show(getSupportFragmentManager(), "sample");
+                break;
+            case R.id.corrdinatorLayoutTest:
+                Intent intent = new Intent(this, CoordinatorLayoutActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.collapselayout:
+                Intent intent1 = new Intent(this, CollapsingToolbarLayoutActivity.class);
+                startActivity(intent1);
+                break;
         }
     }
 }

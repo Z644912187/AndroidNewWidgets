@@ -35,4 +35,16 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="bottomSheetDialogTestButton" />
+
+    <Button
+        android:id="@+id/corrdinatorLayoutTest"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="CorrdinatorLayoutTest" />
+
+    <Button
+        android:id="@+id/collapselayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="collapselayout" />
 </LinearLayout>
