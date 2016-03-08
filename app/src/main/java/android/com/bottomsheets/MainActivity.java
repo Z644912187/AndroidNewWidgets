@@ -1,13 +1,13 @@
 package android.com.bottomsheets;
 
-import android.com.collapsingtoolbar.CollapsingToolbarLayoutActivity;
+import android.com.collapsingtoolbar.CollapsingActivity;
 import android.com.corrdinatorlayout.CoordinatorLayoutActivity;
+import android.com.navigation.NavigationViewActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
-import android.support.design.widget.BottomSheetDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -30,8 +30,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button collapseBottomSheetButton = (Button) findViewById(R.id.collapseBottomSheetButton);
         Button bottomSheetDialogTestButton = (Button) findViewById(R.id.bottomSheetDialogTestButton);
         Button showBottomSheetDialogButton = (Button) findViewById(R.id.showBottomSheetDialogButton);
-        Button corrdinatorLayoutTest = (Button) findViewById(R.id.corrdinatorLayoutTest);
-        Button collapselayout = (Button) findViewById(R.id.collapselayout);
+
+
+        Button corrdinatorLayoutBtn = (Button) findViewById(R.id.corrdinatorlayout_btn);
+        Button collapselayoutBtn = (Button) findViewById(R.id.collapselayout_btn);
+        Button navigationBtn = (Button) findViewById(R.id.navigation_btn);
+
         final TextView text1 = (TextView) findViewById(R.id.text1);
 
         /**
@@ -48,8 +52,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         collapseBottomSheetButton.setOnClickListener(this);
         bottomSheetDialogTestButton.setOnClickListener(this);
         showBottomSheetDialogButton.setOnClickListener(this);
-        corrdinatorLayoutTest.setOnClickListener(this);
-        collapselayout.setOnClickListener(this);
+        corrdinatorLayoutBtn.setOnClickListener(this);
+        collapselayoutBtn.setOnClickListener(this);
+        navigationBtn.setOnClickListener(this);
 
         bottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -90,13 +95,17 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.showBottomSheetDialogButton:
                 new CustomBottomSheetDialogFragment().show(getSupportFragmentManager(), "sample");
                 break;
-            case R.id.corrdinatorLayoutTest:
+            case R.id.corrdinatorlayout_btn:
                 Intent intent = new Intent(this, CoordinatorLayoutActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.collapselayout:
-                Intent intent1 = new Intent(this, CollapsingToolbarLayoutActivity.class);
+            case R.id.collapselayout_btn:
+                Intent intent1 = new Intent(this, CollapsingActivity.class);
                 startActivity(intent1);
+                break;
+            case R.id.navigation_btn:
+                Intent intent3 = new Intent(this, NavigationViewActivity.class);
+                startActivity(intent3);
                 break;
         }
     }

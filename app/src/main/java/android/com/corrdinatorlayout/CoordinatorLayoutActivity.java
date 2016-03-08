@@ -49,8 +49,8 @@ public class CoordinatorLayoutActivity extends AppCompatActivity {
         for(int i=0;i<titles.size();i++){
             fragments.add(new ListFragment());
         }
-        FragmentAdapter mFragmentAdapteradapter =
-                new FragmentAdapter(getSupportFragmentManager(), fragments, titles);
+        CustomFragmentStatePagerAdapter mFragmentAdapteradapter =
+                new CustomFragmentStatePagerAdapter(getSupportFragmentManager(), fragments, titles);
         //给ViewPager设置适配器
         mViewPager.setAdapter(mFragmentAdapteradapter);
         //将TabLayout和ViewPager关联起来。
