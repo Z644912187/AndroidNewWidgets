@@ -1,5 +1,5 @@
-# BottomSheets
+# Android new widgets assembly
 
-Sample application demonstrating use of Android Bottom sheets API
+Android 新控件之AppBarLayout，CoordinatorLayout，CollapsingToolbarLayout，BottomSheetDialog，BottomSheetDialogFragment的使用
 "BottomSheetDialog And BottmSheetDialogFragment" 
 "# BottomSheetDemo" 
